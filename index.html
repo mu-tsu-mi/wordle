@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="main.js"></script>
+    <title>Play WORDLE</title>
+</head>
+<body>
+    <h1>WORDLE</h1>
+    <div>
+        <h2>Score Board</h2>
+    </div>
+    <!-- Add a link to instructions? -->
+    <button>Instructions</button>
+
+    <div class="score-board">
+        <p>score-board</p>
+        <p>You played: </p>
+        <p>Your points: </p>
+    </div>
+    <div class="player-word-box">
+        <div class="guess-1">
+            <span id="guess-1-1st-ch"></span>
+            <span id="guess-1-2nd-ch"></span>
+            <span id="guess-1-3rd-ch"></span>
+            <span id="guess-1-4th-ch"></span>
+            <span id="guess-1-5th-ch"></span>
+        </div>
+        <div class="guess-2">
+            <span id="guess-2-1st-ch"></span>
+            <span id="guess-2-2nd-ch"></span>
+            <span id="guess-2-3rd-ch"></span>
+            <span id="guess-2-4th-ch"></span>
+            <span id="guess-2-5th-ch"></span>
+        </div>
+        <div class="guess-3">
+            <span id="guess-3-1st-ch"></span>
+            <span id="guess-3-2nd-ch"></span>
+            <span id="guess-3-3rd-ch"></span>
+            <span id="guess-3-4th-ch"></span>
+            <span id="guess-3-5th-ch"></span>
+        </div>
+        <div class="guess-4">
+            <span id="guess-4-1st-ch"></span>
+            <span id="guess-4-2nd-ch"></span>
+            <span id="guess-4-3rd-ch"></span>
+            <span id="guess-4-4th-ch"></span>
+            <span id="guess-4-5th-ch"></span>
+        </div>
+        <div class="guess-5">
+            <span id="guess-5-1st-ch"></span>
+            <span id="guess-5-2nd-ch"></span>
+            <span id="guess-5-3rd-ch"></span>
+            <span id="guess-5-4th-ch"></span>
+            <span id="guess-5-5th-ch"></span>
+        </div>
+        <div class="guess-6">
+            <span id="guess-6-1st-ch"></span>
+            <span id="guess-6-2nd-ch"></span>
+            <span id="guess-6-3rd-ch"></span>
+            <span id="guess-6-4th-ch"></span>
+            <span id="guess-6-5th-ch"></span>
+        </div>
+    </div>
+
+    <div class="keyboard">
+        <div class="top-row-keyboard">
+            <span id="key-q">Q</span>
+            <span id="key-w">W</span>
+            <span id="key-e">E</span>
+            <span id="key-r">R</span>
+            <span id="key-t">T</span>
+            <span id="key-y">Y</span>
+            <span id="key-u">U</span>
+            <span id="key-i">I</span>
+            <span id="key-o">O</span>
+            <span id="key-p">P</span>
+        </div>
+        <div class="mid-row-keyboard">
+            <span id="key-a">A</span>
+            <span id="key-s">S</span>
+            <span id="key-d">D</span>
+            <span id="key-f">F</span>
+            <span id="key-g">G</span>
+            <span id="key-h">H</span>
+            <span id="key-j">J</span>
+            <span id="key-k">K</span>
+            <span id="key-l">L</span>
+        </div>
+        <div class="bottom-row-keyboard">
+            <span id="key-delete">DELETE</span>
+            <span id="key-z">Z</span>
+            <span id="key-x">X</span>
+            <span id="key-c">C</span>
+            <span id="key-v">V</span>
+            <span id="key-b">B</span>
+            <span id="key-n">N</span>
+            <span id="key-m">M</span>
+            <span id="key-enter">ENTER</span>
+        </div>
+
+        <!-- Hide here -->
+        <div class="word-bank">
+            <!-- apply grid in css -->
+            <p>Your words</p>
+            <p>Your stickers</p>
+            <!-- for words collected -->
+            <p></p>
+            <!-- for animal stickers -->
+            <p></p>
+        </div>
+
+        <!-- Attach "Correct word was "*****"." -->
+        <div class="game-lost">
+           <div class="lost-message">
+            <p>You lost. Would you like to play again?</p>
+            </div>
+            <div class="replay-button">
+                <p>Play again</p>
+            </div>
+            <div class="exit-button">
+                <p>End game</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

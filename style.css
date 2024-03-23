@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    background-color: rgb(36, 36, 35);
+}
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+/* Start from hiding elements, add keys & word box design */
+/* Create intro page with play button */
+/* at some point, create an array for wordle words */
+/* Play screen, hide intro, console.log random word I choose */
+/* Create win/lose page, make them appear & hide */
