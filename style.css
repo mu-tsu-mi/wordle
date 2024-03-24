@@ -29,11 +29,10 @@
     display: flex;
     align-items: flex-start;
  }
-/* Start from hiding elements, add keys & word box design */
-/* Create intro page with play button */
 /* at some point, create an array for wordle words */
 /* Play screen, hide intro, console.log random word I choose */
 /* Create win/lose page, make them appear & hide */
+/* Add keys & word box design */
 
 /* for instruction page */
 .instructions {
