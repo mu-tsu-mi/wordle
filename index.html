@@ -9,15 +9,14 @@
 </head>
 <body>
     <div class="container">
-    <h1>WORDLE</h1>
-    <div>
-        <h2>Score Board</h2>
+    <div class="top-section">
+        <button id="instruction-button">Instructions</button>
+        <h1>WORDLE</h1>
+        <!-- Add a link to instructions? -->
     </div>
-    <!-- Add a link to instructions? -->
-    <button>Instructions</button>
-
+    <div class="middle-section">
     <div class="score-board">
-        <p>score-board</p>
+        <h2>Score Board</h2>
         <p>You played: </p>
         <p>Your points: </p>
     </div>
@@ -65,7 +64,8 @@
             <span id="guess-6-5th-ch"></span>
         </div>
     </div>
-
+</div>
+<div class="bottom-section">
     <div class="keyboard">
         <div class="top-row-keyboard">
             <span id="key-q">Q</span>
@@ -101,29 +101,40 @@
             <span id="key-m">M</span>
             <span id="key-enter">ENTER</span>
         </div>
-
-        <!-- Hide here -->
-        <div class="word-bank">
-            <!-- apply grid in css -->
-            <p>Your words</p>
-            <p>Your stickers</p>
-            <!-- for words collected -->
-            <p></p>
-            <!-- for animal stickers -->
-            <p></p>
+    </div>
+</div>
+    <!-- Hide here -->
+    <div class="instructions">
+        <h2>&lt; Rule &gt;</h2>
+        <div>
+            <p>This is a game that you make a guess of a word with 5 letters. You have 6 chances per word. Select letters from the keyboard, then press 'Enter' button.
+                The letters and the keys on the keyboard will turn green if you answer the collect letter in the right position. If it is yellow, your correctly guessed the letter but it is in the incorrect position. If it is grey, you did not use a correct letter. Keyboard key colour will also update according to your answer. If you successfully spot the word, you will receive 5 points (and will receive animal stickers). Those will appear in your word bank.
+                Press play button to play WORDLE.</p>
         </div>
+        <span id="play-button">Play</span>
+        <span id="end-button">End game</span>
+    </div>
 
-        <!-- Attach "Correct word was "*****"." -->
-        <div class="game-lost">
-           <div class="lost-message">
-            <p>You lost. Would you like to play again?</p>
-            </div>
-            <div class="replay-button">
-                <p>Play again</p>
-            </div>
-            <div class="exit-button">
-                <p>End game</p>
-            </div>
+    <div class="word-bank">
+        <!-- apply grid in css -->
+        <p>Your words</p>
+        <p>Your stickers</p>
+        <!-- for words collected -->
+        <p></p>
+        <!-- for animal stickers -->
+        <p></p>
+    </div>
+
+    <!-- Attach "Correct word was "*****"." -->
+    <div class="game-lost">
+       <div class="lost-message">
+        <p>You lost. Would you like to play again?</p>
+        </div>
+        <div class="replay-button">
+            <p>Play again</p>
+        </div>
+        <div class="exit-button">
+            <p>End game</p>
         </div>
     </div>
 </div>
