@@ -2,6 +2,12 @@
     box-sizing: border-box;
     background-color: rgb(75, 75, 74);
 }
+/* highlighting keys */
+:root {
+    --key-correct-letter-spot: green;
+    --key-correct-letter: yellow;
+    --incorrect-letter: rgb(50, 49, 49);
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -29,10 +35,6 @@
     display: flex;
     align-items: flex-start;
  }
-/* at some point, create an array for wordle words */
-/* Play screen, hide intro, console.log random word I choose */
-/* Create win/lose page, make them appear & hide */
-/* Add keys & word box design */
 
 /* for instruction page */
 .instructions {
@@ -47,3 +49,4 @@
     display: none;
     background-color: lightgrey;
 }
+
