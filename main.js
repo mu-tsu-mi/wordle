@@ -21,21 +21,19 @@ const playerChoice = {
     fifthUserChoice: [],
     sixthUserChoice: []
 }
-const wordBoxes = {
-    firstWordBox: [],
-    secondWordBox: [],
-    thirdWordBox: [],
-    fourthWordBox: [],
-    fifthWordBox: []
-}
 
 /* Function / Controller */
 function clickedLetter(letter) {
+    if(letter === undefined) {
+        return
+    }
     if(playerChoice.firstUserChoice.length <= 4) {
-        playerChoice.firstUserChoice.push(letter)  
+        playerChoice.firstUserChoice.push(letter)
+        console.log(playerChoice.firstUserChoice)  
     } else {
         // Add: giving the player a choice to reselect their letters
     }
+    // update the word box with the letters
 }
 
 /* eventlistener */
