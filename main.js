@@ -11,11 +11,6 @@ const computerChoice = wordleSource[Math.floor(Math.random() * wordleSource.leng
 console.log(computerChoice)
 
 /* Model / State */
-let keyChoice1;
-let keyChoice2;
-let keyChoice3;
-let keyChoice4;
-let keyChoice5;
 const playerChoice = {
     firstUserChoice: [],
     secondUserChoice: [],
@@ -35,34 +30,28 @@ function clickedLetter(letter) {
         const letterElement = document.createElement("span")
         letterElement.id = playerChoice.firstUserChoice.length
         letterElement.innerHTML = letter
-        guess_1.appendChild(letterElement)
-        keyboard.appendChild(letterElement)
+        guess_1.appendChild(letterElement)   
     }
-    
-    // guess_1.innerHTML = playerChoice.firstUserChoice
 }
 
 // Check on player's word and paint
 function wordCheck(userChoice){
-   for (let i = 0; i < 5; i++) {
-        const firstGussContainer = document.getElementById("guess-1")
+    const firstGussContainer = document.getElementById("guess-1")
+
+    for (let i = 0; i < 5; i++) {
         const letterToModify = firstGussContainer.getElementsByTagName("span")[i]
-    if(userChoice[i] === computerChoice.charAt(i)) {
-        console.log(`${i + 1}th character matched. ${userChoice[i]}`)
-        // paint key box green
-        letterToModify.classList.add("green")
-        // paint keyboard key green
-
-    } else if(computerChoice.includes(userChoice[i]) && userChoice[i] !== computerChoice.charAt(i)) {
-        // paint key box keys yellow
-        letterToModify.classList.add("yellow")
-        // paint keyboard keys yellow
-
-    } else {
-         // paint key box keys dark grey
-         letterToModify.classList.add("grey")
-        // paint keyboard keys dark grey
-    }
+        const keyToModify = document.querySelector(`[data-letter='${userChoice[i]}']`)
+        if(userChoice[i] === computerChoice.charAt(i)) {
+            console.log(`${i + 1}th character matched. ${userChoice[i]}`)
+            letterToModify.classList.add("green")
+            keyToModify.classList.add("green")
+        } else if(computerChoice.includes(userChoice[i]) && userChoice[i] !== computerChoice.charAt(i)) {
+            letterToModify.classList.add("yellow")
+            keyToModify.classList.add("yellow")
+        } else {
+            letterToModify.classList.add("grey")
+            keyToModify.classList.add("grey")
+        }
    }
 }
 
