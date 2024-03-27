@@ -41,6 +41,20 @@ function wordCheck(userChoice){
    for (let i = 0; i < 5; i++) {
     if(userChoice[i] === computerChoice.charAt(i)) {
         console.log(`${i + 1}th character matched. ${userChoice[i]}`)
+        // paint key box green
+        
+        // paint keyboard key green
+
+    } else if(computerChoice.includes(userChoice[i]) && userChoice[i] !== computerChoice.charAt(i)) {
+        console.log(computerChoice.includes(userChoice[i]), userChoice[i])
+        // paint key box keys yellow
+
+        // paint keyboard keys yellow
+
+    } else {
+         // paint key box keys dark grey
+        
+        // paint keyboard keys dark grey
     }
    }
 }
