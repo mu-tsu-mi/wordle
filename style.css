@@ -50,3 +50,13 @@
     background-color: lightgrey;
 }
 
+/* for keyboard and word-box */
+.green {
+    background-color: rgb(3, 190, 3);
+}
+.yellow {
+    background-color: rgb(234, 153, 72);
+}
+.grey {
+    background-color: rgb(8, 8, 8);
+}

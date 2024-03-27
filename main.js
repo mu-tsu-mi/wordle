@@ -31,29 +31,36 @@ function clickedLetter(letter) {
         return
     }
     if(playerChoice.firstUserChoice.length <= 4) {
-        playerChoice.firstUserChoice.push(letter) 
+        playerChoice.firstUserChoice.push(letter)
+        const letterElement = document.createElement("span")
+        letterElement.id = playerChoice.firstUserChoice.length
+        letterElement.innerHTML = letter
+        guess_1.appendChild(letterElement)
+        keyboard.appendChild(letterElement)
     }
-    guess_1.innerHTML = playerChoice.firstUserChoice
+    
+    // guess_1.innerHTML = playerChoice.firstUserChoice
 }
 
 // Check on player's word and paint
 function wordCheck(userChoice){
    for (let i = 0; i < 5; i++) {
+        const firstGussContainer = document.getElementById("guess-1")
+        const letterToModify = firstGussContainer.getElementsByTagName("span")[i]
     if(userChoice[i] === computerChoice.charAt(i)) {
         console.log(`${i + 1}th character matched. ${userChoice[i]}`)
         // paint key box green
-        
+        letterToModify.classList.add("green")
         // paint keyboard key green
 
     } else if(computerChoice.includes(userChoice[i]) && userChoice[i] !== computerChoice.charAt(i)) {
-        console.log(computerChoice.includes(userChoice[i]), userChoice[i])
         // paint key box keys yellow
-
+        letterToModify.classList.add("yellow")
         // paint keyboard keys yellow
 
     } else {
          // paint key box keys dark grey
-        
+         letterToModify.classList.add("grey")
         // paint keyboard keys dark grey
     }
    }
