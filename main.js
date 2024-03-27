@@ -38,8 +38,10 @@ function clickedLetter(letter) {
 
 // Check on player's word and paint
 function wordCheck(userChoice){
-   if(userChoice[0] === computerChoice.charAt(0)) {
-    console.log("first character matched.", userChoice[0])
+   for (let i = 0; i < 5; i++) {
+    if(userChoice[i] === computerChoice.charAt(i)) {
+        console.log(`${i + 1}th character matched. ${userChoice[i]}`)
+    }
    }
 }
 
