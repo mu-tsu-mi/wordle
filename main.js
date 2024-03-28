@@ -13,12 +13,7 @@ console.log(computerChoice)
 /* Model / State */
 const playerChoice = {
     guessNumber: 1,
-    firstUserChoice: [],
-    secondUserChoice: [],
-    thirdUserChoice: [],
-    fourthUserChoice: [],
-    fifthUserChoice: [],
-    sixthUserChoice: []
+    choices: [[], [], [], [], [], [] ]
 }
 
 /* Function / Controller */
@@ -26,8 +21,9 @@ function clickedLetter(letter) {
     if(letter === undefined) {
         return
     }
-    if(playerChoice.firstUserChoice.length <= 4) {
-        playerChoice.firstUserChoice.push(letter)
+    if(playerChoice.choices[playerChoice.guessNumber - 1].length <= 5) {
+        console.log(playerChoice.choices[playerChoice.guessNumber - 1])
+        playerChoice.choices[playerChoice.guessNumber - 1].push(letter)
         const letterElement = document.createElement("span")
         letterElement.innerHTML = letter
         const guessContainer = document.getElementById(`guess-${playerChoice.guessNumber}`)
@@ -53,7 +49,8 @@ function wordCheck(userChoice){
             letterToModify.classList.add("grey")
             keyToModify.classList.add("grey")
         }
-   }
+    }
+    playerChoice.guessNumber += 1
 }
 
 /* eventlistener */
@@ -78,5 +75,5 @@ keyboard.addEventListener("click", function(event) {
 // eventlistener for enter button
 wordEntryButton.addEventListener("click", function(event) {
     event.preventDefault()
-    wordCheck(playerChoice.firstUserChoice)
+    wordCheck(playerChoice.choices[playerChoice.guessNumber - 1])
 }) 
