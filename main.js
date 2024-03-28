@@ -21,7 +21,7 @@ function clickedLetter(letter) {
     if(letter === undefined) {
         return
     }
-    if(playerChoice.choices[playerChoice.guessNumber - 1].length <= 5) {
+    if(playerChoice.choices[playerChoice.guessNumber - 1].length <= 4) {
         console.log(playerChoice.choices[playerChoice.guessNumber - 1])
         playerChoice.choices[playerChoice.guessNumber - 1].push(letter)
         const letterElement = document.createElement("span")
@@ -41,6 +41,7 @@ function wordCheck(userChoice){
         if(userChoice[i] === computerChoice.charAt(i)) {
             console.log(`${i + 1}th character matched. ${userChoice[i]}`)
             letterToModify.classList.add("green")
+            keyToModify.classList.remove("yellow")
             keyToModify.classList.add("green")
         } else if(computerChoice.includes(userChoice[i]) && userChoice[i] !== computerChoice.charAt(i)) {
             letterToModify.classList.add("yellow")
