@@ -49,6 +49,10 @@
     display: none;
     background-color: lightgrey;
 }
+.score-board {
+    display: none;
+    background-color: lightgrey;
+}
 
 /* for keyboard and word-box */
 .green {

@@ -9,103 +9,103 @@
 </head>
 <body>
     <div class="container">
-    <div class="top-section">
+        <div class="top-section">
         <button id="instruction-button">Instructions</button>
         <h1>WORDLE</h1>
-    </div>
-    <div class="middle-section">
-    <div class="score-board">
-        <h2>Score Board</h2>
-        <p>You played: </p>
-        <p>Your points: </p>
-    </div>
-    <div class="player-word-box">
-        <div id="guess-1">
         </div>
-        <div id="guess-2">
+        <div class="middle-section">
+            <div class="score-board">
+                <h2>Score Board</h2>
+                <p>You played: </p>
+                <p>Your points: </p>
+            </div>
+            <div class="player-word-box">
+                <div id="guess-1">
+                </div>
+                <div id="guess-2">
+                </div>
+                <div id="guess-3">
+                </div>
+                <div id="guess-4">
+                </div>
+                <div id="guess-5">
+                </div>
+                <div id="guess-6">
+                </div>
+            </div>
         </div>
-        <div id="guess-3">
+        <div class="bottom-section">
+            <div class="keyboard">
+                <div class="top-row-keyboard">
+                    <span data-letter="Q">Q</span>
+                    <span data-letter="W">W</span>
+                    <span data-letter="E">E</span>
+                    <span data-letter="R">R</span>
+                    <span data-letter="T">T</span>
+                    <span data-letter="Y">Y</span>
+                    <span data-letter="U">U</span>
+                    <span data-letter="I">I</span>
+                    <span data-letter="O">O</span>
+                    <span data-letter="P">P</span>
+                </div>
+                <div class="mid-row-keyboard">
+                    <span data-letter="A">A</span>
+                    <span data-letter="S">S</span>
+                    <span data-letter="D">D</span>
+                    <span data-letter="F">F</span>
+                    <span data-letter="G">G</span>
+                    <span data-letter="H">H</span>
+                    <span data-letter="J">J</span>
+                    <span data-letter="K">K</span>
+                    <span data-letter="L">L</span>
+                </div>
+                <div class="bottom-row-keyboard">
+                    <span id="key-delete">DELETE</span>
+                    <span data-letter="Z">Z</span>
+                    <span data-letter="X">X</span>
+                    <span data-letter="C">C</span>
+                    <span data-letter="V">V</span>
+                    <span data-letter="B">B</span>
+                    <span data-letter="N">N</span>
+                    <span data-letter="M">M</span>
+                    <span id="key-enter">ENTER</span>
+                </div>
+            </div>
         </div>
-        <div id="guess-4">
-        </div>
-        <div id="guess-5">
-        </div>
-        <div id="guess-6">
-        </div>
-    </div>
-</div>
-<div class="bottom-section">
-    <div class="keyboard">
-        <div class="top-row-keyboard">
-            <span data-letter="Q">Q</span>
-            <span data-letter="W">W</span>
-            <span data-letter="E">E</span>
-            <span data-letter="R">R</span>
-            <span data-letter="T">T</span>
-            <span data-letter="Y">Y</span>
-            <span data-letter="U">U</span>
-            <span data-letter="I">I</span>
-            <span data-letter="O">O</span>
-            <span data-letter="P">P</span>
-        </div>
-        <div class="mid-row-keyboard">
-            <span data-letter="A">A</span>
-            <span data-letter="S">S</span>
-            <span data-letter="D">D</span>
-            <span data-letter="F">F</span>
-            <span data-letter="G">G</span>
-            <span data-letter="H">H</span>
-            <span data-letter="J">J</span>
-            <span data-letter="K">K</span>
-            <span data-letter="L">L</span>
-        </div>
-        <div class="bottom-row-keyboard">
-            <span id="key-delete">DELETE</span>
-            <span data-letter="Z">Z</span>
-            <span data-letter="X">X</span>
-            <span data-letter="C">C</span>
-            <span data-letter="V">V</span>
-            <span data-letter="B">B</span>
-            <span data-letter="N">N</span>
-            <span data-letter="M">M</span>
-            <span id="key-enter">ENTER</span>
-        </div>
-    </div>
-</div>
     <!-- Hide here -->
-    <div class="instructions">
-        <h2>&lt; Rule &gt;</h2>
-        <div>
-            <p>This is a game that you make a guess of a word with 5 letters. You have 6 chances per word. Select letters from the keyboard, then press 'Enter' button.
-                The letters and the keys on the keyboard will turn green if you answer the collect letter in the right position. If it is orange, your correctly guessed the letter but it is in the incorrect position. If it is grey, you did not use a correct letter. Keyboard key colour will also update according to your answer. If you successfully spot the word, you will receive 5 points (and will receive animal stickers). Those will appear in your word bank.
-                Press play button to play WORDLE.</p>
-        </div>
-        <span id="play-button">Play</span>
-        <span id="end-button">End game</span>
-    </div>
+            <div class="instructions">
+                <h2>&lt; Rule &gt;</h2>
+                <div>
+                    <p>This is a game that you make a guess of a word with 5 letters. You have 6 chances per word. Select letters from the keyboard, then press 'Enter' button.
+                        The letters and the keys on the keyboard will turn green if you answer the collect letter in the right position. If it is orange, your correctly guessed the letter but it is in the incorrect position. If it is grey, you did not use a correct letter. Keyboard key colour will also update according to your answer. If you successfully spot the word, you will receive 5 points (and will receive animal stickers). Those will appear in your word bank.
+                        Press play button to play WORDLE.</p>
+                </div>
+                <span id="play-button">Play</span>
+                <span id="end-button">End game</span>
+            </div>
 
-    <div class="word-bank">
-        <!-- apply grid in css -->
-        <p>Your words</p>
-        <p>Your stickers</p>
-        <!-- for words collected -->
-        <p></p>
-        <!-- for animal stickers -->
-        <p></p>
-    </div>
+            <div class="word-bank">
+                <!-- apply grid in css -->
+                <p>Your words</p>
+                <p>Your stickers</p>
+                <!-- for words collected -->
+                <p></p>
+                <!-- for animal stickers -->
+                <p></p>
+            </div>
 
     <!-- Attach "Correct word was "*****"." -->
-    <div class="game-lost">
-       <div class="lost-message">
-        <p>You lost. Would you like to play again?</p>
-        </div>
-        <div class="replay-button">
-            <p>Play again</p>
-        </div>
-        <div class="exit-button">
-            <p>End game</p>
-        </div>
-    </div>
+            <div class="game-lost">
+            <div class="lost-message">
+                <p>You lost. Would you like to play again?</p>
+                </div>
+                <div class="replay-button">
+                    <p>Play again</p>
+                </div>
+                <div class="exit-button">
+                    <p>End game</p>
+                </div>
+            </div>
 </div>
 
 
