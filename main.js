@@ -52,6 +52,24 @@ function wordCheck(userChoice){
         return
     }
 
+    function resetColour() {
+        const resetAllGuessLetters = playerWordBoxes.getElementsByTagName('span')
+        Array.from(resetAllGuessLetters).forEach(span => {
+            span.remove()
+        })
+        const removeGreen = keyboard.getElementsByClassName('green')
+        Array.from(removeGreen).forEach(span => {
+            span.classList.remove("green")
+        })
+        const removeYellow = keyboard.getElementsByClassName('yellow')
+        Array.from(removeYellow).forEach(span => {
+            span.classList.remove("yellow")
+        })
+        const removeGrey = keyboard.getElementsByClassName('grey')
+        Array.from(removeGrey).forEach(span => {
+            span.classList.remove("grey")
+        })
+    }
     const guessContainer = document.getElementById(`guess-${playerChoice.guessNumber}`)
     let correctLetterCount = 0
     for (let i = 0; i < 5; i++) {
@@ -77,33 +95,13 @@ function wordCheck(userChoice){
         lostMessage.style.display = "block"
         keyboard.style.display = "none"
         playerWordBoxes.style.display = "none"
-        
-        const allGuessLetters = playerWordBoxes.getElementsByTagName('span')
-        allGuessLetters.forEach(span => {
-            span.remove()
-        })
+        resetColour()
     } 
     if(correctLetterCount === 5) {
         keyboard.style.display = "none"
-        keyboard.style.display = "none"
+        playerWordBoxes.style.display = "none"
         winWordBank.style.display = "block"
-
-        const resetAllGuessLetters = playerWordBoxes.getElementsByTagName('span')
-        Array.from(resetAllGuessLetters).forEach(span => {
-            span.remove()
-        })
-        const removeGreen = keyboard.getElementsByClassName('green')
-        Array.from(removeGreen).forEach(span => {
-            span.classList.remove("green")
-        })
-        const removeYellow = keyboard.getElementsByClassName('yellow')
-        Array.from(removeYellow).forEach(span => {
-            span.classList.remove("yellow")
-        })
-        const removeGrey = keyboard.getElementsByClassName('grey')
-        Array.from(removeGrey).forEach(span => {
-            span.classList.remove("grey")
-        })
+        resetColour()
     }
 }
 
