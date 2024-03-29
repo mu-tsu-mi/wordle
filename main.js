@@ -3,6 +3,7 @@ const instructionButton = document.getElementById("instruction-button")
 const playButton = document.getElementById("play-button")
 const instructions = document.querySelector(".instructions")
 const wordEntryButton = document.getElementById("key-enter")
+const wordDeleteButton = document.getElementById("key-delete")
 const keyboard = document.querySelector(".keyboard")
 const winWordBank = document.querySelector(".word-bank")
 const lostMessage = document.querySelector(".game-lost")
@@ -31,6 +32,20 @@ function clickedLetter(letter) {
         const guessContainer = document.getElementById(`guess-${playerChoice.guessNumber}`)
         guessContainer.appendChild(letterElement)   
     }
+}
+
+// Add: delete button feature
+function deleteLetter(guess) {
+    if(guess.length === 0) {
+        return
+    }
+    
+    guess.pop()
+
+    const guessContainer = document.getElementById(`guess-${playerChoice.guessNumber}`)
+    const currentRow = guessContainer.getElementsByTagName("span")
+    const letterToDelete = currentRow[currentRow.length - 1]
+    letterToDelete.remove()
 }
 
 function wordCheck(userChoice){
@@ -88,6 +103,12 @@ playButton.addEventListener("click", function(event) {
 keyboard.addEventListener("click", function(event) {
     event.preventDefault()
     clickedLetter(event.target.dataset.letter)
+})
+
+// eventlistener for delete button
+wordDeleteButton.addEventListener("click", function(event) {
+    event.preventDefault()
+    deleteLetter(playerChoice.choices[playerChoice.guessNumber - 1])
 })
 
 // eventlistener for enter button
