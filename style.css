@@ -30,6 +30,9 @@
     display: flex;
     flex: 2;
 }
+.keyboard {
+    display: block;
+}
 
 #instruction-button {
     display: flex;
