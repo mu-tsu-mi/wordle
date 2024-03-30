@@ -21,13 +21,14 @@ console.log(computerChoice)
 const playerChoice = {
     guessNumber: 1,
     choices: [[], [], [], [], [], [] ],
-    playCount: [],
+    playCount: 1,
     winCount: []
 }
 
 /* Function / Controller */
 function resetComputerChoice() {
     computerChoice = wordleSource[Math.floor(Math.random() * wordleSource.length)]
+    console.log(computerChoice)
 }
 function resetPlayerChoice(){
     return playerChoice.choices = [[],[],[],[],[],[]]
@@ -107,12 +108,17 @@ function wordCheck(userChoice){
         keyboard.style.display = "none"
         playerWordBoxes.style.display = "none"
         resetColour()
+        playerChoice.guessNumber = 1              
+        playerChoice.playCount++
+        return
     } 
     if(correctLetterCount === 5) {
         keyboard.style.display = "none"
         playerWordBoxes.style.display = "none"
         winWordBank.style.display = "block"
         resetColour()
+        playerChoice.guessNumber = 1
+        playerChoice.playCount++
     }
 }
 
@@ -172,6 +178,8 @@ replayAfterLossButton.addEventListener("click", function(event) {
     lostMessage.style.display = "none"
     keyboard.style.display = "block"
     playerWordBoxes.style.display = "block"
+    resetPlayerChoice()
+    resetComputerChoice()
     // Add func: win/loss count for scoreboard
 })
 
