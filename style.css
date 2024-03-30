@@ -38,11 +38,18 @@
     display: flex;
     align-items: flex-start;
  }
-
-/* for instruction page */
+ 
 .instructions {
     display: none;
     background-color: lightgrey;
+}
+.play-button {
+    color: #d1dad1;
+    background-color: #014f01;
+}
+.exit-button {
+    color: #fabf51;
+    background-color: #d55302;
 }
 .word-bank {
     display: none;

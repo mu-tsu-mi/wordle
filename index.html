@@ -80,8 +80,8 @@
                         The letters and the keys on the keyboard will turn green if you answer the collect letter in the right position. If it is orange, your correctly guessed the letter but it is in the incorrect position. If it is grey, you did not use a correct letter. Keyboard key colour will also update according to your answer. If you successfully spot the word, you will receive 5 points (and will receive animal stickers). Those will appear in your word bank.
                         Press play button to play WORDLE.</p>
                 </div>
-                <span id="play-button">Play</span>
-                <span id="end-button">End game</span>
+                <span type="button" class="play-button" id="start-button">Play</span>
+                <span type="button" class="exit-button" id="end-button">End game</span>
             </div>
 
             <div class="word-bank">
@@ -93,20 +93,24 @@
                 <p></p>
                 <!-- for animal stickers -->
                 <p></p>
-                <button>Play again</button>
-                <button>End game</button>
+                <div>
+                    <button type="button" class="play-button" id="back-to-play-button">Play again</button>
+                </div>
+                <div>
+                    <button type="button" class="exit-button" id="win-exit">End game</button>
+                </div>
             </div>
 
     <!-- Attach "Correct word was "*****"." -->
             <div class="game-lost">
             <div class="lost-message">
                 <p>You lost. Would you like to play again?</p>
+            </div>
+                <div>
+                    <button type="button" class="play-button" id="replay-button">Play again</button>
                 </div>
-                <div class="replay-buttonno ">
-                    <button>Play again</button>
-                </div>
-                <div class="exit-button">
-                    <button>End game</button>
+                <div>
+                    <button type="button" class="exit-button" id ="lost-exit">End game</button>
                 </div>
             </div>
 </div>
