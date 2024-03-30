@@ -54,11 +54,15 @@
 .player-word-box {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     width: 15rem;
 }
 
 .player-word-box span {
     padding: 0.5rem;
+    justify-content: center;
+    border-color: black;
+    border-width: 5rem;
 }
 
 .player-word-box div {
@@ -101,8 +105,9 @@
     background-color: rgb(3, 190, 3);
 }
 .yellow {
-    background-color: rgb(234, 153, 72);
+    background-color: #e5ea48;
 }
 .grey {
     background-color: rgb(8, 8, 8);
 }
+/* rgb(234, 153, 72) */

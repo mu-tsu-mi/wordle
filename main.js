@@ -127,12 +127,16 @@ instructionButton.addEventListener("click", function(event) {
     event.preventDefault()
     //replace with toggle func later.
     instructions.style.display = "block"
+    keyboard.style.display = "none"
+    playerWordBoxes.style.display = "none"
 })
 
 playButton.addEventListener("click", function(event) {
     event.preventDefault()
     //replace with toggle func later.
     instructions.style.display = "none"
+    keyboard.style.display = "block"
+    playerWordBoxes.style.display = "block"
 })
 
 // eventlistener for keyboard and word-box
