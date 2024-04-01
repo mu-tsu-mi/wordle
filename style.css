@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    background-color: rgb(75, 75, 74);
+    background-color: #4b4b4a;
 }
 /* highlighting keys */
 :root {
@@ -49,21 +49,35 @@ h2 {
     display: block;
 }
 
-.keyboard span {
-    padding: 0.5rem;
-}
-
 .keyboard div {
     display: flex;
-    padding: 0.5rem;
+    padding: 0.3rem;
     justify-content: center;
+    height: 4rem;
+}
+
+.key {
+    display: flex;
+    justify-content:center;
+    padding: 0.5rem;
+    background-color: #697682;
+    border-radius: 0.5rem;
+    align-items: center;
+    border: 0.1rem solid #281e1e;
+    width: 2rem;
+}
+
+.large-key {
+    width: 5rem;
 }
 
 .player-word-box {
     display: flex;
     flex-direction: column;
-    width: 15rem;
-    justify-content: center;
+    width: 16rem;
+    height: 19rem;
+    justify-content: flex-start;
+    border: 0.5rem solid whitesmoke;
 }
 
 .guess {
@@ -73,8 +87,11 @@ h2 {
 .letter {
     display: flex;
     padding: 0.5rem 0;
+    height: 3rem;
     width: 3rem;
     justify-content: center;
+    align-items: center;
+    background-color: #697682;
 }
 
 #instruction-button {
@@ -107,7 +124,6 @@ h2 {
 }
 .word-bank {
     display: none;
-    background-color: lightgrey;
 }
 .game-lost {
     display: none;

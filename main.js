@@ -67,7 +67,7 @@ function wordCheck(userChoice){
     }
 
     function resetColour() {
-        const resetAllGuessLetters = playerWordBoxes.getElementsByClassName('letter')
+        const resetAllGuessLetters = playerWordBoxes.getElementsByClassName("letter")
         Array.from(resetAllGuessLetters).forEach(div => {
             div.remove()
         })

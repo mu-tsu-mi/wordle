@@ -14,105 +14,100 @@
             <h1>WORDLE</h1>
         </div>
         <div class="middle-section">
-            <div class="score-board">
-                <h2>Score Board</h2>
-                <p>You played: </p>
-                <p>Your points: </p>
-            </div>
-            <div class="player-word-box">
-                <div id="guess-1" class="guess">
+                <div class="score-board">
+                    <h2>Score Board</h2>
+                    <p>You played: </p>
+                    <p>Your points: </p>
                 </div>
-                <div id="guess-2" class="guess">
-                </div>
-                <div id="guess-3" class="guess">
-                </div>
-                <div id="guess-4" class="guess">
-                </div>
-                <div id="guess-5" class="guess">
-                </div>
-                <div id="guess-6" class="guess">
-                </div>
-            </div>
-            <div class="instructions">
-                <h2>&lt; Rule &gt;</h2>
-                <div>
-                    <p>This is a game that you make a guess of a word with 5 letters. You have 6 chances per word. Select letters from the keyboard, then press 'Enter' button.
-                        The letters and the keys on the keyboard will turn green if you answer the collect letter in the right position. If it is yellow, your correctly guessed the letter but it is in the incorrect position. If it is grey, you did not use a correct letter. Keyboard key colour will also update according to your answer. If you successfully spot the word, you will receive 5 points (and will receive animal stickers). Those will appear in your word bank.
-                        Press play button to play WORDLE.</p>
-                </div>
-                <span type="button" class="play-button" id="start-button">Play</span>
-            </div>
-            <div class="game-lost">
-                <div class="lost-message">
-                    <p>You lost.</p>
-                </div>
-                    <div>
-                        <button type="button" class="play-button" id="replay-button">Play again</button>
+                <div class="player-word-box">
+                    <div id="guess-1" class="guess">
                     </div>
-                    <div>
-                        <button type="button" class="exit-button" id ="lost-exit">End game</button>
+                    <div id="guess-2" class="guess">
+                    </div>
+                    <div id="guess-3" class="guess">
+                    </div>
+                    <div id="guess-4" class="guess">
+                    </div>
+                    <div id="guess-5" class="guess">
+                    </div>
+                    <div id="guess-6" class="guess">
                     </div>
                 </div>
+                <div class="instructions">
+                    <h2>&lt; Rule &gt;</h2>
+                    <div>
+                        <p>This is a game that you make a guess of a word with 5 letters. You have 6 chances per word. Select letters from the keyboard, then press 'Enter' button.
+                            The letters and the keys on the keyboard will turn green if you answer the collect letter in the right position. If it is yellow, your correctly guessed the letter but it is in the incorrect position. If it is grey, you did not use a correct letter. Keyboard key colour will also update according to your answer. If you successfully spot the word, you will receive 5 points (and will receive animal stickers). Those will appear in your word bank.
+                            Press play button to play WORDLE.</p>
+                    </div>
+                    <span type="button" class="play-button" id="start-button">Play</span>
+                </div>
+                <div class="game-lost">
+                    <div class="lost-message">
+                        <p>You lost.</p>
+                    </div>
+                        <div>
+                            <button type="button" class="play-button" id="replay-button">Play again</button>
+                        </div>
+                        <div>
+                            <button type="button" class="exit-button" id ="lost-exit">End game</button>
+                        </div>
+                </div>
+                <div class="word-bank">
+                        <!-- apply grid in css -->
+                        <p>Congratulations! Here is the word you got right and an animal sticker as a reward!</p>
+                        <p>Your words</p>
+                        <p>Your stickers</p>
+                        <!-- for words collected -->
+                        <p></p>
+                        <!-- for animal stickers -->
+                        <p></p>
+                        <div>
+                            <button type="button" class="play-button" id="back-to-play-button">Play again</button>
+                        </div>
+                        <div>
+                            <button type="button" class="exit-button" id="win-exit">End game</button>
+                        </div>
+                </div>
         </div>
-        <div class="bottom-section">
-            <div class="keyboard">
-                <div class="top-row-keyboard">
-                    <span data-letter="Q">Q</span>
-                    <span data-letter="W">W</span>
-                    <span data-letter="E">E</span>
-                    <span data-letter="R">R</span>
-                    <span data-letter="T">T</span>
-                    <span data-letter="Y">Y</span>
-                    <span data-letter="U">U</span>
-                    <span data-letter="I">I</span>
-                    <span data-letter="O">O</span>
-                    <span data-letter="P">P</span>
+            <div class="bottom-section">
+                <div class="keyboard">
+                    <div class="top-row-keyboard">
+                        <span data-letter="Q" class="key">Q</span>
+                        <span data-letter="W" class="key">W</span>
+                        <span data-letter="E" class="key">E</span>
+                        <span data-letter="R" class="key">R</span>
+                        <span data-letter="T" class="key">T</span>
+                        <span data-letter="Y" class="key">Y</span>
+                        <span data-letter="U" class="key">U</span>
+                        <span data-letter="I" class="key">I</span>
+                        <span data-letter="O" class="key">O</span>
+                        <span data-letter="P" class="key">P</span>
+                    </div>
+                    <div class="mid-row-keyboard">
+                        <span data-letter="A" class="key">A</span>
+                        <span data-letter="S" class="key">S</span>
+                        <span data-letter="D" class="key">D</span>
+                        <span data-letter="F" class="key">F</span>
+                        <span data-letter="G" class="key">G</span>
+                        <span data-letter="H" class="key">H</span>
+                        <span data-letter="J" class="key">J</span>
+                        <span data-letter="K" class="key">K</span>
+                        <span data-letter="L" class="key">L</span>
+                    </div>
+                    <div class="bottom-row-keyboard">
+                        <span id="key-delete" class="key large-key">DELETE</span>
+                        <span data-letter="Z" class="key">Z</span>
+                        <span data-letter="X" class="key">X</span>
+                        <span data-letter="C" class="key">C</span>
+                        <span data-letter="V" class="key">V</span>
+                        <span data-letter="B" class="key">B</span>
+                        <span data-letter="N" class="key">N</span>
+                        <span data-letter="M" class="key">M</span>
+                        <span id="key-enter" class="key large-key">ENTER</span>
+                    </div>
                 </div>
-                <div class="mid-row-keyboard">
-                    <span data-letter="A">A</span>
-                    <span data-letter="S">S</span>
-                    <span data-letter="D">D</span>
-                    <span data-letter="F">F</span>
-                    <span data-letter="G">G</span>
-                    <span data-letter="H">H</span>
-                    <span data-letter="J">J</span>
-                    <span data-letter="K">K</span>
-                    <span data-letter="L">L</span>
-                </div>
-                <div class="bottom-row-keyboard">
-                    <span id="key-delete">DELETE</span>
-                    <span data-letter="Z">Z</span>
-                    <span data-letter="X">X</span>
-                    <span data-letter="C">C</span>
-                    <span data-letter="V">V</span>
-                    <span data-letter="B">B</span>
-                    <span data-letter="N">N</span>
-                    <span data-letter="M">M</span>
-                    <span id="key-enter">ENTER</span>
-                </div>
-            </div>
-        </div>
-            <div class="word-bank">
-                <!-- apply grid in css -->
-                <p>Congratulations! Here is the word you got right and an animal sticker as a reward!</p>
-                <p>Your words</p>
-                <p>Your stickers</p>
-                <!-- for words collected -->
-                <p></p>
-                <!-- for animal stickers -->
-                <p></p>
-                <div>
-                    <button type="button" class="play-button" id="back-to-play-button">Play again</button>
-                </div>
-                <div>
-                    <button type="button" class="exit-button" id="win-exit">End game</button>
-                </div>
-            </div>
-
-   
-            
+            </div>     
 </div>
-
-
 </body>
 </html>
