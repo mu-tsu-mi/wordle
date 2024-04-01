@@ -20,17 +20,17 @@
                 <p>Your points: </p>
             </div>
             <div class="player-word-box">
-                <div id="guess-1">
+                <div id="guess-1" class="guess">
                 </div>
-                <div id="guess-2">
+                <div id="guess-2" class="guess">
                 </div>
-                <div id="guess-3">
+                <div id="guess-3" class="guess">
                 </div>
-                <div id="guess-4">
+                <div id="guess-4" class="guess">
                 </div>
-                <div id="guess-5">
+                <div id="guess-5" class="guess">
                 </div>
-                <div id="guess-6">
+                <div id="guess-6" class="guess">
                 </div>
             </div>
             <div class="instructions">
@@ -42,6 +42,17 @@
                 </div>
                 <span type="button" class="play-button" id="start-button">Play</span>
             </div>
+            <div class="game-lost">
+                <div class="lost-message">
+                    <p>You lost.</p>
+                </div>
+                    <div>
+                        <button type="button" class="play-button" id="replay-button">Play again</button>
+                    </div>
+                    <div>
+                        <button type="button" class="exit-button" id ="lost-exit">End game</button>
+                    </div>
+                </div>
         </div>
         <div class="bottom-section">
             <div class="keyboard">
@@ -81,9 +92,6 @@
                 </div>
             </div>
         </div>
-    <!-- Hide here -->
-            
-
             <div class="word-bank">
                 <!-- apply grid in css -->
                 <p>Congratulations! Here is the word you got right and an animal sticker as a reward!</p>
@@ -101,18 +109,8 @@
                 </div>
             </div>
 
-    <!-- Attach "Correct word was "*****"." -->
-            <div class="game-lost">
-            <div class="lost-message">
-                <p>You lost.</p>
-            </div>
-                <div>
-                    <button type="button" class="play-button" id="replay-button">Play again</button>
-                </div>
-                <div>
-                    <button type="button" class="exit-button" id ="lost-exit">End game</button>
-                </div>
-            </div>
+   
+            
 </div>
 
 

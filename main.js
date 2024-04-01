@@ -37,9 +37,11 @@ function clickedLetter(letter) {
     if(letter === undefined) {
         return
     }
+
     if(playerChoice.choices[playerChoice.guessNumber - 1].length <= 4) {
         playerChoice.choices[playerChoice.guessNumber - 1].push(letter)
-        const letterElement = document.createElement("span")
+        const letterElement = document.createElement("div")
+        letterElement.classList.add("letter")
         letterElement.innerHTML = letter
         const guessContainer = document.getElementById(`guess-${playerChoice.guessNumber}`)
         guessContainer.appendChild(letterElement)   
@@ -54,8 +56,8 @@ function deleteLetter(guess) {
     guess.pop()
 
     const guessContainer = document.getElementById(`guess-${playerChoice.guessNumber}`)
-    const currentRow = guessContainer.getElementsByTagName("span")
-    const letterToDelete = currentRow[currentRow.length - 1]
+    const allLettersInCurrentGuess = guessContainer.getElementsByClassName("letter")
+    const letterToDelete = allLettersInCurrentGuess[allLettersInCurrentGuess.length - 1]
     letterToDelete.remove()
 }
 
@@ -65,27 +67,27 @@ function wordCheck(userChoice){
     }
 
     function resetColour() {
-        const resetAllGuessLetters = playerWordBoxes.getElementsByTagName('span')
-        Array.from(resetAllGuessLetters).forEach(span => {
-            span.remove()
+        const resetAllGuessLetters = playerWordBoxes.getElementsByClassName('letter')
+        Array.from(resetAllGuessLetters).forEach(div => {
+            div.remove()
         })
         const removeGreen = keyboard.getElementsByClassName('green')
-        Array.from(removeGreen).forEach(span => {
-            span.classList.remove("green")
+        Array.from(removeGreen).forEach(div => {
+            div.classList.remove("green")
         })
         const removeYellow = keyboard.getElementsByClassName('yellow')
-        Array.from(removeYellow).forEach(span => {
-            span.classList.remove("yellow")
+        Array.from(removeYellow).forEach(div => {
+            div.classList.remove("yellow")
         })
         const removeGrey = keyboard.getElementsByClassName('grey')
-        Array.from(removeGrey).forEach(span => {
-            span.classList.remove("grey")
+        Array.from(removeGrey).forEach(div => {
+            div.classList.remove("grey")
         })
     }
     const guessContainer = document.getElementById(`guess-${playerChoice.guessNumber}`)
     let correctLetterCount = 0
     for (let i = 0; i < 5; i++) {
-        const letterToModify = guessContainer.getElementsByTagName("span")[i]
+        const letterToModify = guessContainer.getElementsByClassName("letter")[i]
         const keyToModify = document.querySelector(`[data-letter='${userChoice[i]}']`)
         if(userChoice[i] === computerChoice.charAt(i)) {
             console.log(`${i + 1}th character matched. ${userChoice[i]}`)
@@ -192,4 +194,6 @@ exitAfterLossButton.addEventListener("click", function(event) {
     event.preventDefault()
     lostMessage.style.display = "none"
     instructions.style.display = "block"
+    resetPlayerChoice()
+    resetComputerChoice()
 })

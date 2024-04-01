@@ -4,9 +4,9 @@
 }
 /* highlighting keys */
 :root {
-    --key-correct-letter-spot: green;
-    --key-correct-letter: yellow;
-    --incorrect-letter: rgb(50, 49, 49);
+    --key-correct-letter-spot: #014f01;
+    --key-correct-letter: #dad019;
+    --incorrect-letter: #281e1e;
 }
 h1 {
     color: whitesmoke;
@@ -62,19 +62,19 @@ h2 {
 .player-word-box {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     width: 15rem;
-    border: 2px solid whitesmoke;
-}
-
-.player-word-box span {
-    padding: 0.5rem;
     justify-content: center;
-    border-color: black;
 }
 
-.player-word-box div {
-    padding: 0.5rem;
+.guess {
+    display: flex;
+}
+
+.letter {
+    display: flex;
+    padding: 0.5rem 0;
+    width: 3rem;
+    justify-content: center;
 }
 
 #instruction-button {
@@ -94,10 +94,16 @@ h2 {
 .play-button {
     color: #d1dad1;
     background-color: #014f01;
+    border-radius: 5px;
+    border-color: #014f01;
+    padding: 0.5rem;
 }
 .exit-button {
     color: #fabf51;
     background-color: #d55302;
+    border-radius: 5px;
+    border-color:#d55302;
+    padding: 0.5rem;
 }
 .word-bank {
     display: none;
@@ -105,7 +111,6 @@ h2 {
 }
 .game-lost {
     display: none;
-    background-color: lightgrey;
 }
 .score-board {
     display: none;
@@ -114,12 +119,11 @@ h2 {
 
 /* for keyboard and word-box */
 .green {
-    background-color: rgb(3, 190, 3);
+    background-color: var(--key-correct-letter-spot);
 }
 .yellow {
-    background-color: #e5ea48;
+    background-color: var(--key-correct-letter);
 }
 .grey {
-    background-color: rgb(8, 8, 8);
+    background-color: var(--incorrect-letter);
 }
-/* rgb(234, 153, 72) */
