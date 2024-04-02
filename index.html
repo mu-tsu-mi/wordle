@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="instructions">
-                    <h2>&lt; Rule &gt;</h2>
+                    <h2>&lt; Rules &gt;</h2>
                     <div>
                         <p>This is a game that you make a guess of a word with 5 letters. You have 6 chances per word. Select letters from the keyboard, then press 'Enter' button.
                             The letters and the keys on the keyboard will turn green if you answer the collect letter in the right position. If it is yellow, your correctly guessed the letter but it is in the incorrect position. If it is grey, you did not use a correct letter. Keyboard key colour will also update according to your answer. If you successfully spot the word, you will receive 5 points (and will receive animal stickers). Those will appear in your word bank.
@@ -46,11 +46,13 @@
                     <div class="lost-message">
                         <p>You lost.</p>
                     </div>
-                        <div>
-                            <button type="button" class="play-button" id="replay-button">Play again</button>
-                        </div>
-                        <div>
-                            <button type="button" class="exit-button" id ="lost-exit">End game</button>
+                        <div class="buttons">
+                            <div>
+                                <button type="button" class="play-button" id="replay-button">Play again</button>
+                            </div>
+                            <div>
+                                <button type="button" class="exit-button" id ="lost-exit">End game</button>
+                            </div>
                         </div>
                 </div>
                 <div class="word-bank">
@@ -59,14 +61,16 @@
                         <p>Your words</p>
                         <p>Your stickers</p>
                         <!-- for words collected -->
-                        <p></p>
+                        <div class="win-words"></div>
                         <!-- for animal stickers -->
-                        <p></p>
-                        <div>
-                            <button type="button" class="play-button" id="back-to-play-button">Play again</button>
-                        </div>
-                        <div>
-                            <button type="button" class="exit-button" id="win-exit">End game</button>
+                        <div class="stickers"></div>
+                        <div class="buttons">
+                            <div>
+                                <button type="button" class="play-button" id="back-to-play-button">Play again</button>
+                            </div>
+                            <div>
+                                <button type="button" class="exit-button" id="win-exit">End game</button>
+                            </div>
                         </div>
                 </div>
         </div>

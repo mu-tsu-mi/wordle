@@ -65,6 +65,7 @@ h2 {
     align-items: center;
     border: 0.1rem solid #281e1e;
     width: 2rem;
+    cursor: pointer;
 }
 
 .large-key {
@@ -97,23 +98,30 @@ h2 {
 #instruction-button {
     display: flex;
     justify-content: center;
-    width: 6rem;
+    width: 8rem;
     color: whitesmoke;
-    padding: 0.5rem;
+    padding: 0.8rem;
     background-color: #428ef9;
     border-radius: 5px;
     border-color: #0267f4;
+    cursor: pointer;
  }
  
 .instructions {
     display: none;
+    width: 30rem;
+    font-size: 1.3rem;
 }
+
 .play-button {
     color: #d1dad1;
     background-color: #014f01;
     border-radius: 5px;
     border-color: #014f01;
     padding: 0.5rem;
+    margin: 0 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
 }
 .exit-button {
     color: #fabf51;
@@ -121,16 +129,26 @@ h2 {
     border-radius: 5px;
     border-color:#d55302;
     padding: 0.5rem;
+    margin: 0 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
 }
 .word-bank {
     display: none;
+    font-size: 1.2rem;
 }
 .game-lost {
     display: none;
+    font-size: 1.2rem;
 }
 .score-board {
     display: none;
     background-color: lightgrey;
+    font-size: 1.2rem;
 }
 
 /* for keyboard and word-box */
