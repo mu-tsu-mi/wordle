@@ -145,6 +145,9 @@ h2 {
     display: none;
     font-size: 1.2rem;
 }
+.wordbank-table {
+    display: flex;
+}
 .score-board {
     display: none;
     background-color: lightgrey;
