@@ -93,10 +93,12 @@ function wordCheck(userChoice){
 
         wordToWordBank.innerHTML = userChoice.join('')
         wordToWordBank.style.backgroundColor = "var(--key-correct-letter-spot)"
+        wordToWordBank.classList.add("win-word")
         winWords.appendChild(wordToWordBank)
-        const animalStickerToAttach = document.createElement("div")
+        let animalStickerToAttach = document.createElement("div")
         animalStickerToAttach.innerHTML = animals[playerChoice.winCount - 1]
         animalStickerToAttach.style.backgroundColor = "var(--key-correct-letter-spot)"
+        animalStickerToAttach.classList.add("sticker")
         animalStickers.appendChild(animalStickerToAttach)
     }
 
@@ -125,6 +127,7 @@ function wordCheck(userChoice){
         lostMessage.style.display = "block"
         keyboard.style.display = "none"
         playerWordBoxes.style.display = "none"
+        instructionButton.style.display = "none"
         resetColour()
         playerChoice.guessNumber = 1              
         playerChoice.playCount++
@@ -134,6 +137,7 @@ function wordCheck(userChoice){
         keyboard.style.display = "none"
         playerWordBoxes.style.display = "none"
         winWordBank.style.display = "block"
+        instructionButton.style.display = "none"
         resetColour()
         playerChoice.guessNumber = 1
         playerChoice.winCount++
@@ -157,6 +161,7 @@ playButton.addEventListener("click", function(event) {
     instructions.style.display = "none"
     keyboard.style.display = "block"
     playerWordBoxes.style.display = "block"
+    instructionButton.style.display = "block"
 })
 
 // eventlistener for keyboard and word-box
@@ -183,6 +188,7 @@ replayAfterWinButton.addEventListener("click", function(event) {
     keyboard.style.display = "block"
     playerWordBoxes.style.display = "block"
     winWordBank.style.display = "none"
+    instructionButton.style.display = "block"
     resetComputerChoice()
     resetPlayerChoice()
     // Add func: win/loss count for scoreboard
@@ -202,8 +208,10 @@ replayAfterLossButton.addEventListener("click", function(event) {
     lostMessage.style.display = "none"
     keyboard.style.display = "block"
     playerWordBoxes.style.display = "block"
+    instructionButton.style.display = "block"
     resetPlayerChoice()
     resetComputerChoice()
+
     // Add func: win/loss count for scoreboard
 })
 
