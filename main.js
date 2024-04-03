@@ -87,6 +87,17 @@ function wordCheck(userChoice){
         })
     }
 
+    function showLostMessage() {
+        const lostText = document.createElement("div")
+        lostText.setAttribute("id", "lost-word")
+        lostText.innerHTML = `You lost. The correct word was [ ${computerChoice} ].`
+        lostMessage.appendChild(lostText)
+        lostMessage.style.display = "block"
+        keyboard.style.display = "none"
+        playerWordBoxes.style.display = "none"
+        instructionButton.style.display = "none"
+    }
+
     function wordBankUpdate(userChoice) {
         let wordToWordBank = document.createElement("div")
         const animals = ["🦉", "🦁", "🦄"]
@@ -95,7 +106,7 @@ function wordCheck(userChoice){
         wordToWordBank.style.backgroundColor = "var(--key-correct-letter-spot)"
         wordToWordBank.classList.add("win-word")
         winWords.appendChild(wordToWordBank)
-        let animalStickerToAttach = document.createElement("div")
+        const animalStickerToAttach = document.createElement("div")
         animalStickerToAttach.innerHTML = animals[playerChoice.winCount - 1]
         animalStickerToAttach.style.backgroundColor = "var(--key-correct-letter-spot)"
         animalStickerToAttach.classList.add("sticker")
@@ -124,15 +135,13 @@ function wordCheck(userChoice){
     playerChoice.guessNumber++
 
     if(playerChoice.guessNumber >= 7 && correctLetterCount !== 5) {
-        lostMessage.style.display = "block"
-        keyboard.style.display = "none"
-        playerWordBoxes.style.display = "none"
-        instructionButton.style.display = "none"
+        showLostMessage()
         resetColour()
         playerChoice.guessNumber = 1              
         playerChoice.playCount++
         return
     } 
+
     if(correctLetterCount === 5) {
         keyboard.style.display = "none"
         playerWordBoxes.style.display = "none"
@@ -209,6 +218,7 @@ replayAfterLossButton.addEventListener("click", function(event) {
     keyboard.style.display = "block"
     playerWordBoxes.style.display = "block"
     instructionButton.style.display = "block"
+    document.getElementById('lost-word').remove()
     resetPlayerChoice()
     resetComputerChoice()
 
