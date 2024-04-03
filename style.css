@@ -147,6 +147,9 @@ h2 {
 }
 .wordbank-table {
     display: flex;
+    font-size: 2rem;
+    background-color: lightgrey;
+    border: 5px solid black;
 }
 .score-board {
     display: none;
