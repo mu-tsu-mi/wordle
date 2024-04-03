@@ -92,9 +92,11 @@ function wordCheck(userChoice){
         const animals = ["🦉", "🦁", "🦄"]
 
         wordToWordBank.innerHTML = userChoice.join('')
+        wordToWordBank.style.backgroundColor = "var(--key-correct-letter-spot)"
         winWords.appendChild(wordToWordBank)
         const animalStickerToAttach = document.createElement("div")
         animalStickerToAttach.innerHTML = animals[playerChoice.winCount - 1]
+        animalStickerToAttach.style.backgroundColor = "var(--key-correct-letter-spot)"
         animalStickers.appendChild(animalStickerToAttach)
     }
 

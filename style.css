@@ -136,6 +136,7 @@ h2 {
 .buttons {
     display: flex;
     justify-content: center;
+    margin: 0.5rem 0;
 }
 .word-bank {
     display: none;
@@ -147,9 +148,30 @@ h2 {
 }
 .wordbank-table {
     display: flex;
-    font-size: 2rem;
-    background-color: lightgrey;
-    border: 5px solid black;
+    justify-content: space-around;
+    font-size: 3rem;
+}
+#win-words {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--key-correct-letter-spot);
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0.2rem;
+}
+#stickers {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--key-correct-letter-spot);
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0.2rem;
 }
 .score-board {
     display: none;
