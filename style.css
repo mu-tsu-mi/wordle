@@ -12,6 +12,7 @@
 h1 {
     color: whitesmoke;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3rem;
 }
 
 h2 {
@@ -188,10 +189,14 @@ h2 {
     justify-content: center;
     align-items: center;
 }
-.score-board {
+#score-board {
     display: none;
     background-color: lightgrey;
     font-size: 1.2rem;
+}
+.score-board-table {
+    display: flex;
+    justify-content: flex-end;
 }
 
 /* for keyboard and word-box */
