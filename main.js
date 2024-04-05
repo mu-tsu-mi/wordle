@@ -123,11 +123,7 @@ function wordCheck(userChoice){
 
     function countPlayNumber() {
         currentPlayCount.innerHTML = playerChoice.playCount
-        if(playerChoice.playCount === 3) {
-            playerChoice.playCount = 1
-        } else {
-            playerChoice.playCount++
-        }
+        playerChoice.playCount++
     }
 
     const guessContainer = document.getElementById(`guess-${playerChoice.guessNumber}`)
@@ -219,6 +215,13 @@ replayAfterWinButton.addEventListener("click", function(event) {
     scoreBoard.style.display = "none"
     resetComputerChoice()
     resetPlayerChoice()
+    if(playerChoice.playCount > 3) {
+        resetPlayStatus()
+        instructions.style.display = "block"
+        keyboard.style.display = "none"
+        playerWordBoxes.style.display = "none"
+        instructionButton.style.display = "none"
+    }
     // Add func: win/loss count for scoreboard
 })
 
@@ -243,7 +246,13 @@ replayAfterLossButton.addEventListener("click", function(event) {
     document.getElementById('lost-text').innerHTML = ""
     resetPlayerChoice()
     resetComputerChoice()
-
+    if(playerChoice.playCount > 3) {
+        resetPlayStatus()
+        instructions.style.display = "block"
+        keyboard.style.display = "none"
+        playerWordBoxes.style.display = "none"
+        instructionButton.style.display = "none"
+    }
     // Add func: win/loss count for scoreboard
 })
 
