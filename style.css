@@ -10,9 +10,12 @@
     --incorrect-letter: #281e1e;
 }
 h1 {
-    color: whitesmoke;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 3rem;
+    font-size: 4rem;
+    background-image: linear-gradient(to top,#f36969 ,whitesmoke);
+    background-size: 100%;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 h2 {
@@ -191,14 +194,23 @@ h2 {
 }
 #score-board {
     display: none;
-    background-color: lightgrey;
+    background-color: #bed7f9;
     font-size: 1.2rem;
+    color: #428ef9;
+    padding: 2rem;
+    margin: 0.5rem;
+    border-radius: 15px;
+    border: 3px solid #428ef9;
 }
-.score-board-table {
+#score-board div {
+    background-color: #bed7f9;
+    margin: 0.5rem 0;
+}
+/* do I need this css and html class? */
+/* .play-count {
     display: flex;
-    justify-content: flex-end;
-}
-
+    flex: 1;
+} */
 /* for keyboard and word-box */
 .green {
     background-color: var(--key-correct-letter-spot);
