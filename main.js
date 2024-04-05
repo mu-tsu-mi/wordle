@@ -38,6 +38,9 @@ function resetComputerChoice() {
 function resetPlayerChoice(){
     return playerChoice.choices = [[],[],[],[],[],[]]
 }
+function resetPlayerCount(){
+    playerChoice.playCount = 1
+}
 function clickedLetter(letter) {
     if(letter === undefined) {
         return
@@ -116,11 +119,11 @@ function wordCheck(userChoice){
     }
 
     function countPlayNumber() {
-        if(playerChoice.playCount < 3) {
         currentPlayCount.innerHTML = playerChoice.playCount
-        } else {
+        if(playerChoice.playCount === 3) {
             playerChoice.playCount = 1
-            return
+        } else {
+            playerChoice.playCount++
         }
     }
 
@@ -130,7 +133,6 @@ function wordCheck(userChoice){
         const letterToModify = guessContainer.getElementsByClassName("letter")[i]
         const keyToModify = document.querySelector(`[data-letter='${userChoice[i]}']`)
         if(userChoice[i] === computerChoice.charAt(i)) {
-            console.log(`${i + 1}th character matched. ${userChoice[i]}`)
             letterToModify.classList.add("green")
             keyToModify.classList.remove("yellow")
             keyToModify.classList.add("green")
@@ -144,13 +146,12 @@ function wordCheck(userChoice){
         }
     }
     playerChoice.guessNumber++
-
+    
     if(playerChoice.guessNumber >= 7 && correctLetterCount !== 5) {
         showLostMessage()
         resetColour()
         countPlayNumber()
         playerChoice.guessNumber = 1              
-        playerChoice.playCount++
         return
     } 
 
@@ -165,7 +166,6 @@ function wordCheck(userChoice){
         playerChoice.guessNumber = 1
         playerChoice.winCount++
         wordBankUpdate(userChoice)
-        playerChoice.playCount++
     }
 }
 
@@ -225,6 +225,7 @@ exitAfterWinButton.addEventListener("click", function(event) {
     instructions.style.display = "block"
     winWordBank.style.display = "none"
     scoreBoard.style.display = "none"
+    resetPlayerCount()
     resetComputerChoice()
     resetPlayerChoice()
 })
@@ -249,6 +250,7 @@ exitAfterLossButton.addEventListener("click", function(event) {
     lostMessage.style.display = "none"
     instructions.style.display = "block"
     scoreBoard.style.display = "none"
+    resetPlayerCount()
     resetPlayerChoice()
     resetComputerChoice()
 })
