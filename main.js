@@ -38,8 +38,11 @@ function resetComputerChoice() {
 function resetPlayerChoice(){
     return playerChoice.choices = [[],[],[],[],[],[]]
 }
-function resetPlayerCount(){
+function resetPlayStatus(){
+    playerChoice.winCount = 0
     playerChoice.playCount = 1
+    animalStickers.innerHTML = ""
+    winWords.innerHTML = ""
 }
 function clickedLetter(letter) {
     if(letter === undefined) {
@@ -225,7 +228,7 @@ exitAfterWinButton.addEventListener("click", function(event) {
     instructions.style.display = "block"
     winWordBank.style.display = "none"
     scoreBoard.style.display = "none"
-    resetPlayerCount()
+    resetPlayStatus()
     resetComputerChoice()
     resetPlayerChoice()
 })
@@ -250,7 +253,7 @@ exitAfterLossButton.addEventListener("click", function(event) {
     lostMessage.style.display = "none"
     instructions.style.display = "block"
     scoreBoard.style.display = "none"
-    resetPlayerCount()
+    resetPlayStatus()
     resetPlayerChoice()
     resetComputerChoice()
 })
