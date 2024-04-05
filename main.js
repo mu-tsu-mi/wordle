@@ -91,10 +91,8 @@ function wordCheck(userChoice){
     }
 
     function showLostMessage() {
-        const lostText = document.createElement("div")
-        lostText.setAttribute("id", "lost-word")
+        const lostText = document.getElementById("lost-text")
         lostText.innerHTML = `You lost. The correct word was [ ${computerChoice} ].`
-        lostMessage.appendChild(lostText)
         lostMessage.style.display = "block"
         keyboard.style.display = "none"
         playerWordBoxes.style.display = "none"
@@ -150,6 +148,7 @@ function wordCheck(userChoice){
     if(playerChoice.guessNumber >= 7 && correctLetterCount !== 5) {
         showLostMessage()
         resetColour()
+        countPlayNumber()
         playerChoice.guessNumber = 1              
         playerChoice.playCount++
         return
@@ -237,7 +236,7 @@ replayAfterLossButton.addEventListener("click", function(event) {
     playerWordBoxes.style.display = "block"
     instructionButton.style.display = "block"
     scoreBoard.style.display = "none"
-    document.getElementById('lost-word').remove()
+    document.getElementById('lost-text').innerHTML = ""
     resetPlayerChoice()
     resetComputerChoice()
 
