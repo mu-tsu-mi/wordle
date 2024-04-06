@@ -206,11 +206,6 @@ h2 {
     background-color: #bed7f9;
     margin: 0.5rem 0;
 }
-/* do I need this css and html class? */
-/* .play-count {
-    display: flex;
-    flex: 1;
-} */
 /* for keyboard and word-box */
 .green {
     background-color: var(--key-correct-letter-spot);

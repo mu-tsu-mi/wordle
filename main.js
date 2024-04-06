@@ -45,6 +45,15 @@ function resetPlayStatus(){
     animalStickers.innerHTML = ""
     winWords.innerHTML = ""
 }
+function showInstructionScreenAfterResetPlay() {
+    if(playerChoice.playCount > 3) {
+        resetPlayStatus()
+        instructions.style.display = "block"
+        keyboard.style.display = "none"
+        playerWordBoxes.style.display = "none"
+        instructionButton.style.display = "none"
+    }
+}
 function clickedLetter(letter) {
     if(letter === undefined) {
         return
@@ -161,6 +170,8 @@ function wordCheck(userChoice){
     } 
 
     if(correctLetterCount === 5) {
+        // hideGameScreen()
+        // showWordBankScreen()
         keyboard.style.display = "none"
         playerWordBoxes.style.display = "none"
         winWordBank.style.display = "block"
@@ -215,6 +226,8 @@ wordEntryButton.addEventListener("click", function(event) {
 // eventlistener for play again button on win screen
 replayAfterWinButton.addEventListener("click", function(event) {
     event.preventDefault()
+    // hideWordBankScreen()
+    // showGameScreen()
     keyboard.style.display = "block"
     playerWordBoxes.style.display = "block"
     winWordBank.style.display = "none"
@@ -222,14 +235,7 @@ replayAfterWinButton.addEventListener("click", function(event) {
     scoreBoard.style.display = "none"
     resetComputerChoice()
     resetPlayerChoice()
-    if(playerChoice.playCount > 3) {
-        resetPlayStatus()
-        instructions.style.display = "block"
-        keyboard.style.display = "none"
-        playerWordBoxes.style.display = "none"
-        instructionButton.style.display = "none"
-    }
-    // Add func: win/loss count for scoreboard
+    showInstructionScreenAfterResetPlay()
 })
 
 // eventlistener for end game button on win screen
@@ -253,14 +259,7 @@ replayAfterLossButton.addEventListener("click", function(event) {
     document.getElementById('lost-text').innerHTML = ""
     resetPlayerChoice()
     resetComputerChoice()
-    if(playerChoice.playCount > 3) {
-        resetPlayStatus()
-        instructions.style.display = "block"
-        keyboard.style.display = "none"
-        playerWordBoxes.style.display = "none"
-        instructionButton.style.display = "none"
-    }
-    // Add func: win/loss count for scoreboard
+    showInstructionScreenAfterResetPlay()
 })
 
 // eventlistener for end game button on lost screen
