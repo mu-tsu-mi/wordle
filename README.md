@@ -1,5 +1,9 @@
 
 #Wordle game
+
+## Game URL
+https://mu-tsu-mi.github.io/wordle/
+
 ## Wireframes
 ![my wireframe](Wireframe-Wordle.png)
 

@@ -36,24 +36,38 @@ function resetComputerChoice() {
     computerChoice = wordleSource[Math.floor(Math.random() * wordleSource.length)]
     console.log(computerChoice)
 }
+
 function resetPlayerChoice(){
     return playerChoice.choices = [[],[],[],[],[],[]]
 }
+
 function resetPlayStatus(){
     playerChoice.winCount = 0
     playerChoice.playCount = 1
     animalStickers.innerHTML = ""
     winWords.innerHTML = ""
 }
+
+function showInstructionScreen() {
+    instructions.style.display = "block"
+    keyboard.style.display = "none"
+    playerWordBoxes.style.display = "none"
+    instructionButton.style.display = "none"
+}
+
 function showInstructionScreenAfterResetPlay() {
     if(playerChoice.playCount > 3) {
         resetPlayStatus()
-        instructions.style.display = "block"
-        keyboard.style.display = "none"
-        playerWordBoxes.style.display = "none"
-        instructionButton.style.display = "none"
+        showInstructionScreen()
     }
 }
+
+function showGameScreen() {
+    keyboard.style.display = "block"
+    playerWordBoxes.style.display = "block"
+    instructionButton.style.display = "block"
+}
+
 function clickedLetter(letter) {
     if(letter === undefined) {
         return
@@ -170,8 +184,6 @@ function wordCheck(userChoice){
     } 
 
     if(correctLetterCount === 5) {
-        // hideGameScreen()
-        // showWordBankScreen()
         keyboard.style.display = "none"
         playerWordBoxes.style.display = "none"
         winWordBank.style.display = "block"
@@ -189,16 +201,11 @@ function wordCheck(userChoice){
 /* eventlistener */
 instructionButton.addEventListener("click", function(event) {
     event.preventDefault()
-    //replace with toggle func later.
-    instructions.style.display = "block"
-    keyboard.style.display = "none"
-    playerWordBoxes.style.display = "none"
-    instructionButton.style.display = "none"
+    showInstructionScreen()
 })
 
 playButton.addEventListener("click", function(event) {
     event.preventDefault()
-    //replace with toggle func later.
     instructions.style.display = "none"
     keyboard.style.display = "block"
     playerWordBoxes.style.display = "block"
@@ -226,12 +233,8 @@ wordEntryButton.addEventListener("click", function(event) {
 // eventlistener for play again button on win screen
 replayAfterWinButton.addEventListener("click", function(event) {
     event.preventDefault()
-    // hideWordBankScreen()
-    // showGameScreen()
-    keyboard.style.display = "block"
-    playerWordBoxes.style.display = "block"
+    showGameScreen()
     winWordBank.style.display = "none"
-    instructionButton.style.display = "block"
     scoreBoard.style.display = "none"
     resetComputerChoice()
     resetPlayerChoice()
@@ -252,9 +255,7 @@ exitAfterWinButton.addEventListener("click", function(event) {
 replayAfterLossButton.addEventListener("click", function(event) {
     event.preventDefault()
     lostMessage.style.display = "none"
-    keyboard.style.display = "block"
-    playerWordBoxes.style.display = "block"
-    instructionButton.style.display = "block"
+    showGameScreen()
     scoreBoard.style.display = "none"
     document.getElementById('lost-text').innerHTML = ""
     resetPlayerChoice()
