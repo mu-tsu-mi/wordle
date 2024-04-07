@@ -1,23 +1,31 @@
 
 # Wordle game
 
-## Wireframes
+## Wireframe
+Here is part of the wireframe for my Wordle game. It consists from a main game screen, instructions, 
+win and lost screens with a scoreboard.
+
 ![my wireframe](Wireframe-Wordle.png)
 
 ## My Game image
+Below is a screen capture of the main game screen during play.
+
 ![my game image](my-game-image.png)
 
 ## Technologies used
-HTML, CSS and JavaScript
+HTML, CSS (flexbox for layout) and JavaScript (DOM)
 
 ## Getting Started
 ### Game URL
+Click here to play the game. Instructions are available in the game.
 https://mu-tsu-mi.github.io/wordle/
 
 ### User Story
 As a player, 
 * I press the play button to start the game. Maximum number of play per game is set as 3 times.
 * I am given 6 attempts to guess the correct word that consists from 5 letters.
+* I can not submit my guess if it is less than 5 letters.
+* If I wish, I can delete letters in my current guess.
 * When I guess a correct character in the right place, the word box turns green, 
 When I guess it correctly but in an incorrect spot, the word box turns yellow. 
 The box turns grey when I guess a character incorrectly. 
@@ -25,16 +33,18 @@ The box turns grey when I guess a character incorrectly.
 In this way,  I will know which one I need to continue guessing to reveal the answer.
 
 * Score board will be updated and I can collect the words I answered correctly in my word-bank and an animal sticker per win.
+* Next round of game is available after I played the game 3 times. The game will take you to the Instructions screen.
 
 ## Roadmap
-> Basic feature - Make the game work
- >> Instructions screen, Main screen, Generating computer choice of word, Limiting # of letters as five letters, Updating player's letter choice to word-boxes, Checking if the letters are matched with computer choice, and updating keys and letters in the word-boxes colour, Making Enter-button work, Making Delete-button work, Clearing key & word boxes colour for the next play, Play-count, Win-count, Resetting the game, Win screen, Lose screen with a message of the correct wordle word, Updating Word-bank in Win-screen, Updating scoreboard, Removing play status from the scoreboard, Making sure each screen appear/ hide correctly
+Basic feature - Make the game work
+ > Instructions screen, Main screen, Generating computer choice of word, Limiting # of letters as five letters, Updating player's letter choice to word-boxes, Checking if the letters are matched with computer choice, and updating keys and letters in the word-boxes colour, Making Enter-button work, Making Delete-button work, Clearing key & word boxes colour for the next play, Play-count, Win-count, Resetting the game, Win screen, Lose screen with a message of the correct wordle word, Updating Word-bank in Win-screen, Updating scoreboard, Removing play status from the scoreboard, Making sure each screen appear/ hide correctly
 
-> Enhancement I added - Make the game fun & smooth
- >> Updating and limiting play-count maximum 3 times per game, Adding animal sticker table
+Enhancement I added - Make the game fun & smooth
+ > Updating and limiting play-count maximum 3 times per game, Adding animal sticker table
 
 ## Future Enhancement Feature to Consider
-Add real-word-verification feature
+* Add real-word-verification feature
+* Support mobile use for win and lost screen
 
 ## Presentation notes on my progress of the project
 I made wordle. I set maximum number of play to 3 times per game. I used this website (https://www.rockpapershotgun.com/wordle-past-answers) for my wordle words that has the real wordle answers.
@@ -57,10 +67,10 @@ I still get confused looking at my code in Javascript, I think I need to be bett
 
 
 ### TODO
-* Add basic HTML
-* Add basic CSS
-* Game logic JavaScript for happy scenario
-* Modify JavaScript for edge cases
-* Game logic JavaScript for other scenarios
-* Add CSS
-* Fix bugs JavaScript
+- [X] Add basic HTML
+- [X] Add basic CSS
+- [X] Game logic JavaScript for happy scenario
+- [X] Modify JavaScript for edge cases
+- [X] Game logic JavaScript for other scenarios
+- [X] Add CSS
+- [X] Fix bugs JavaScript
