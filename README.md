@@ -8,9 +8,13 @@ win and lost screens with a scoreboard.
 ![my wireframe](Wireframe-Wordle.png)
 
 ## My Game image
-Below is a screen capture of the main game screen during play.
+Below is a screen capture of the main game screen during play on desktop.
 
 ![my game image](my-game-image.png)
+
+The game screen itself supports mobile use.
+
+![my game image on mobile](game-image-Mobile.PNG) 
 
 ## Technologies used
 HTML, CSS (flexbox for layout) and JavaScript (DOM)
